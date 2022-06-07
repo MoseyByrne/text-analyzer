@@ -27,3 +27,12 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+function removeOffensiveWords(text) {
+  const wordArray = text.split(" ");
+    let result = wordArray.filter(word => word.toLowerCase() !== "zoinks"); 
+    result = result.filter(word => word.toLowerCase() !== "muppeteers");
+    result = result.filter(word => word.toLowerCase() !== "biffaroni");
+    result = result.filter(word => word.toLowerCase() !== "loopdaloop");
+    return result;
+}

@@ -67,3 +67,27 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Describe: removeOffensiveWords()
+
+Test: "It should find how many time a given word appears in the string"
+Code:
+const text = "red red green green blue"
+const word = "red"
+removeOffensiveWords(word, text);
+Expected Output: 2
+
+Test: "It should remove each instance of a given word from the string"
+Code:
+const text = "red green green red blue";
+const word = "red";
+removeOffensiveWords(word, text);
+Expected Output: [green, green, blue]
+
+Test: "It should return a word match regardless of case."
+Code:
+const text = "REd green green reD blue";
+const word = "red";
+removeOffensiveWords(text);
+Expected Output: [green, green, blue]
+
